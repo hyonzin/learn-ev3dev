@@ -1,9 +1,6 @@
 from ev3dev.ev3 import *
 import time
 
-Leds.set_color(Leds.LEFT, Leds.GREEN)
-Leds.set_color(Leds.RIGHT, Leds.RED)
-
 ts = TouchSensor()
 sec = 0
 
