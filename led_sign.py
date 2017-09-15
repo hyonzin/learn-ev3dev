@@ -27,3 +27,4 @@ while True:
     sec += 1
     if sec >= 22:
         sec = 0
+
