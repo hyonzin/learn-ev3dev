@@ -16,6 +16,7 @@ while True:
     elif sec == 10:
         Leds.set_color(Leds.LEFT, Leds.YELLOW)
         Leds.set_color(Leds.RIGHT, Leds.YELLOW)
+
     elif sec == 12:
         Leds.set_color(Leds.LEFT, Leds.GREEN)
         Leds.set_color(Leds.RIGHT, Leds.YELLOW, pct=0)
