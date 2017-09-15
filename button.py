@@ -5,6 +5,7 @@ btn = Button()
 
 while True:
     if btn.any():
+        print(btn.process())
         exit()
     else:
         sleep(0.01)
