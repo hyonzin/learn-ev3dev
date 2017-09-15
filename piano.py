@@ -16,12 +16,12 @@ lcd_str=''
 def gonban(melody_num):
     global lcd_str
     Sound.tone(freq[melody_num], 200).wait()
-    lcd_str += melody[melody_num] + '-'
+    lcd_str = melody[melody_num]
 
 def update_screen():
     global lcd_str
     lcd.clear()
-    lcd.draw.text((5,5), lcd_str, font = fonts.load('luBS18'))
+    lcd.draw.text((60,60), lcd_str, font = fonts.load('luBS18'))
     lcd.update()
 
 while True:
@@ -29,4 +29,4 @@ while True:
         if btn.check_buttons(buttons=comb[i]):
             gonban(i)
             update_screen()
-    sleep(0.01)
+    sleep(0.1)
