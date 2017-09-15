@@ -10,6 +10,7 @@ while True:
         break
 
     if sec == 0:
+        Leds.set_color(Leds.LEFT, Leds.GREEN, pct=0)
         Leds.set_color(Leds.RIGHT, Leds.RED)
 
     elif sec == 10:
@@ -17,7 +18,7 @@ while True:
         Leds.set_color(Leds.RIGHT, Leds.YELLOW)
     elif sec == 12:
         Leds.set_color(Leds.LEFT, Leds.GREEN)
-        Leds.set_color(Leds.RIGHT, Leds.YELLO, pct=0)
+        Leds.set_color(Leds.RIGHT, Leds.YELLOW, pct=0)
 
     time.sleep(1)
     sec += 1
