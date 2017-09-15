@@ -1,4 +1,5 @@
 from ev3dev.ev3 import *
+import ev3dev.fonts as fonts
 from time import sleep
 from PIL import Image
 
@@ -11,7 +12,7 @@ sec = 10
 while True:
     if sec >= 0:
         lcd.clear()
-        lcd.draw.text((40,80), str(sec))
+        lcd.draw.text((40,80), str(sec), font = fonts.load('luBS24'))
         lcd.update()
         sleep(1)
 
