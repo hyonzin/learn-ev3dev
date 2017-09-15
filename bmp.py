@@ -12,7 +12,7 @@ sec = 10
 while True:
     if sec >= 0:
         lcd.clear()
-        lcd.draw.text((30,110), str(sec), font = fonts.load('luBS24'))
+        lcd.draw.text((60,60), str(sec), font = fonts.load('luBS24'))
         lcd.update()
         sleep(1)
 
