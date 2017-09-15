@@ -10,10 +10,12 @@ sec = 10
 
 while True:
     if sec >= 0:
-        lcd.draw.text((40,120), str(sec))
+        lcd.clear()
+        lcd.draw.text((40,80), str(sec))
         lcd.update()
         sleep(1)
 
+        lcd.clear()
         if sec > 0:
             lcd.image.paste(bomb_image, (0, 0))
         else:
