@@ -9,13 +9,13 @@ count=0
 state=True
 
 while True:
-    for i in range(0, 10):
+    for i in range(0, 20):
         if state and ts.is_pressed:
             state = False
             count+=1
         elif not state and not ts.is_pressed:
             state = True
-        sleep(0.1)
+        sleep(0.05)
 
     lcd_str = str(count)
 
