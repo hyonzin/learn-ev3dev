@@ -8,11 +8,13 @@ ts = TouchSensor()
 count=0
 
 while True:
-    if ts.is_pressed:
-        count+=1
-        lcd_str = str(count)
+    for i in range(0, 10):
+        if ts.is_pressed:
+            count+=1
+            sleep(0.1)
 
-        lcd.clear()
-        lcd.draw.text((60,60), lcd_str, font = fonts.load('luBS24'))
-        lcd.update()
-        sleep(0.1)
+    lcd_str = str(count)
+
+    lcd.clear()
+    lcd.draw.text((60,60), lcd_str, font = fonts.load('luBS24'))
+    lcd.update()
