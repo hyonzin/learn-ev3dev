@@ -6,11 +6,15 @@ from time import sleep
 lcd = Screen()
 ts = TouchSensor()
 count=0
+state=True
 
 while True:
     for i in range(0, 10):
-        if ts.is_pressed:
+        if state and ts.is_pressed:
+            state = False
             count+=1
+        elif not state and not ts.is_pressed:
+            state = True
         sleep(0.1)
 
     lcd_str = str(count)
