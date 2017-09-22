@@ -11,7 +11,7 @@ while True:
     for i in range(0, 10):
         if ts.is_pressed:
             count+=1
-            sleep(0.1)
+        sleep(0.1)
 
     lcd_str = str(count)
 
