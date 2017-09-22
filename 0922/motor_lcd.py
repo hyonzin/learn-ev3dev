@@ -10,7 +10,7 @@ i=0
 
 while True:
     i+=1
-    m_speed = math.sin(i*0.1) * 1000
+    m_speed = math.sin(i*0.2) * 1000
     m.run_forever(speed_sp=m_speed)
 
     print("actual speed = " + str(m.speed))
