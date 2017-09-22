@@ -23,7 +23,8 @@ while not ts.value():
                     max((us.value() - e) * multi_us_val, 0))
     # print(str(cur_speed) + " " + units)
 
-    lcd_str = str(cur_speed) + " " + units
+    distance = us.value()/10
+    lcd_str = str(distance) + " " + units
     lcd.clear()
     lcd.draw.text((60,60), lcd_str, font = fonts.load('luBS24'))
     lcd.update()
