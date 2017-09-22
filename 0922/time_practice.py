@@ -11,7 +11,7 @@ sum = int1 + int2
 # Get user input
 while True:
     try:
-        ans = int(input('What is '+str(int1)+' + '+str(int2)+' ?'))
+        ans = int(input('What is '+str(int1)+' + '+str(int2)+' ? '))
     except ValueError:
         print("Sorry, I didn't understand that.")
         continue
