@@ -9,12 +9,12 @@ ts = TouchSensor(); assert ts.connected, "Connect a touch sensor to any port"
 
 us.mode='US-DIST-CM'
 units = us.units
-e = 1
+e = 50 # (mm)
 
 while not ts.value():
     distance = us.value()/10
     print(str(distance) + " " + units)
 
-    mL.run_forever(speed_sp=min(1000, us.value()))
-    mR.run_forever(speed_sp=min(1000, us.value()))
+    mL.run_forever(speed_sp=min(1000, us.value() - e))
+    mR.run_forever(speed_sp=min(1000, us.value() - e))
 
