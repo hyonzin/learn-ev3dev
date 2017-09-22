@@ -15,6 +15,6 @@ while not ts.value():
     distance = us.value()/10
     print(str(distance) + " " + units)
 
-    mL.run_forever(speed_sp=min(1000, us.value() - e))
-    mR.run_forever(speed_sp=min(1000, us.value() - e))
+    mL.run_forever(speed_sp=min(1000, max(us.value() - e, 0)))
+    mR.run_forever(speed_sp=min(1000, max(us.value() - e, 0)))
 
