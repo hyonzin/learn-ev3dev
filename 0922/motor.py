@@ -6,8 +6,25 @@ m = LargeMotor('outB')
 m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action='hold')
 sleep(2)
 
-m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action='break')
+m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action='brake')
 sleep(2)
 
 m.run_to_rel_pos(position_sp=360, speed_sp=900, stop_action='coast')
 sleep(2)
+
+
+m.run_timed(time_sp=3000, speed_sp=-750)
+print("set speed (speed_sp) = " + str(m.speed_sp))
+print("actual speed = " + str(m.speed))
+sleep(1)
+print("actual speed = " + str(m.speed))
+sleep(4)
+
+
+m.run_timed(time_sp=3000, speed_sp=750)
+print("set speed (speed_sp) = " + str(m.speed_sp))
+print("actual speed = " + str(m.speed))
+sleep(1)
+print("actual speed = " + str(m.speed))
+sleep(4)
+
