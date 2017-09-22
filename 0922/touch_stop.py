@@ -6,11 +6,11 @@ mR = LargeMotor('outB')
 
 ts = TouchSensor()
 
-mL.run_forever()
-mR.run_forever()
+mL.run_forever(speed_sp=1000)
+mR.run_forever(speed_sp=1000)
 
 while True:
-    if ts.value() == 1:
+    if ts.is_pressed:
         mL.stop(stop_action="hold")
         mR.stop(stop_action="hold")
         break
