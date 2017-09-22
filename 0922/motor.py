@@ -20,7 +20,6 @@ sleep(1)
 print("actual speed = " + str(m.speed))
 sleep(1)
 
-
 m.run_timed(time_sp=1000, speed_sp=100)
 print("set speed (speed_sp) = " + str(m.speed_sp))
 print("actual speed = " + str(m.speed))
@@ -29,6 +28,6 @@ print("actual speed = " + str(m.speed))
 sleep(1)
 
 m.run_timed(time_sp=3000, speed_sp=250, stop_action='brake')
+Sound.beep()
 m.wait_while('running')
-
 Sound.beep()
