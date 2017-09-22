@@ -11,13 +11,12 @@ us.mode='US-DIST-CM'
 units = us.units
 
 m_speed = 1500
-multi_us = 2
 e = 50 # (mm)
 
 while not ts.value():
     distance = us.value()/10
     print(str(distance) + " " + units)
 
-    mL.run_forever(speed_sp=min(m_speed, max(us.value()*multi_us - e, 0)))
-    mR.run_forever(speed_sp=min(m_speed, max(us.value()*multi_us - e, 0)))
+    mL.run_forever(speed_sp=min(m_speed, max(us.value() - e, 0)))
+    mR.run_forever(speed_sp=min(m_speed, max(us.value() - e, 0)))
 
