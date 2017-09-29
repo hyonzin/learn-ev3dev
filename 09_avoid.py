@@ -20,17 +20,32 @@ def limit_speed(speed):
     min_speed= -999
     return min(max(speed, min_speed), max_speed)
 
-def turn(degree):
-    degree = degree*0.95
+def turn_to(angle):
+    start_angle = current_angle = gy.value()
+    angle_to_turn = (angle-start_angle) * 0.95
+
+    if angle_to_turn > 0:
+        mL.run_forever(speed_sp= rotate_speed)
+        mR.run_forever(speed_sp=-rotate_speed)
+    else:
+        mL.run_forever(speed_sp=-rotate_speed)
+        mR.run_forever(speed_sp= rotate_speed)
+
+    while (angle_to_turn > angle-start_angle and current_angle < start_angle+angle_to_turn) \
+            or (angle_to_turn < angle-start_angle and current_angle > start_angle+angle_to_turn):
+        current_angle = gy.value()
+
+def turn(angle):
+    angle = angle*0.95
 
     mL.run_forever(speed_sp= rotate_speed)
     mR.run_forever(speed_sp=-rotate_speed)
 
     start_angle = current_angle = gy.value()
-    finish_angle = start_angle + degree;
+    finish_angle = start_angle + angle;
 
-    while (degree > 0 and current_angle < finish_angle) \
-            or (degree < 0 and current_angle > finish_angle):
+    while (angle > 0 and current_angle < finish_angle) \
+            or (angle < 0 and current_angle > finish_angle):
         current_angle = gy.value()
 
     mL.stop(stop_action="hold")
@@ -49,14 +64,15 @@ def go(distance = short_distance):
         mL.run_forever(speed_sp=limit_speed(go_speed))
         mR.run_forever(speed_sp=limit_speed(go_speed))
 
+        current_angle = gy.value()
         if us.value() < 200:
-            turn_right()
+            turn_to(current_angle+90)
             go()
-            turn_left()
+            turn_to(current_angle)
             go()
-            turn_left()
+            turn_to(current_angle-90)
             go()
-            turn_right()
+            turn_to(current_angle)
 
         moved_distance += 1
 

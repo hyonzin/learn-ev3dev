@@ -17,8 +17,8 @@
       <file leaf-file-name="09_avoid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09_avoid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="127">
+              <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -49,9 +49,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>rotate_speed</find>
+      <find>degree</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>angle</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -314,7 +316,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="180 degree rotation" />
     <MESSAGE value="show gyro rate with my class" />
     <MESSAGE value="about package" />
     <MESSAGE value="str in show_text" />
@@ -339,7 +340,8 @@
     <MESSAGE value="avoid 4" />
     <MESSAGE value="avoid 5" />
     <MESSAGE value="avoid 6 (turn)" />
-    <option name="LAST_COMMIT_MESSAGE" value="avoid 6 (turn)" />
+    <MESSAGE value="avoid 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="avoid 7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09_avoid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="127">
+          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
