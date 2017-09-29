@@ -14,9 +14,8 @@ degree = 90
 go_position = 1000
 go_speed = 500
 rotate_speed = 100
-turn_count = 1
 
-start_angle = current_angle = gy.value()
+degree = degree*0.96
 
 while not ts.is_pressed:
     # Go straight
@@ -29,7 +28,8 @@ while not ts.is_pressed:
     mR.run_forever(speed_sp=-degree)
 
     # Turn
-    finish_angle = start_angle + degree*turn_count;
+    start_angle = current_angle = gy.value()
+    finish_angle = start_angle + degree;
 
     while (degree > 0 and current_angle < finish_angle) \
             or (degree < 0 and current_angle > finish_angle):
@@ -38,4 +38,3 @@ while not ts.is_pressed:
 
     mL.stop(stop_action="hold")
     mR.stop(stop_action="hold")
-    turn_count+=1
