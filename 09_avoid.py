@@ -11,32 +11,56 @@ us.mode='US-DIST-CM'
 
 go_speed = 100
 rotate_speed = 100
+degree = 90
 
 initial_angle = gy.value()
-moved_distance = 0
+short_distance = 800
 rotated_degree = 0
 cosine_distance = 0
+degree = degree*0.95
 
 def limit_speed(speed):
     max_speed = 999
     min_speed= -999
     return min(max(speed, min_speed), max_speed)
 
+def turn():
+    start_angle = current_angle = gy.value()
+    finish_angle = start_angle + degree;
+
+    while (degree > 0 and current_angle < finish_angle) \
+            or (degree < 0 and current_angle > finish_angle):
+        current_angle = gy.value()
+
+    mL.stop(stop_action="hold")
+    mR.stop(stop_action="hold")
+
+def turn_right():
+    turn(90)
+
+def turn_left():
+    turn(-90)
+
+def go(distance):
+    moved_distance=0
+
+    while moved_distance < distance:
+        mL.run_forever(speed_sp=limit_speed(go_speed))
+        mR.run_forever(speed_sp=limit_speed(go_speed))
+
+        if us.value() < 300:
+            turn_right()
+            go(short_distance)
+            turn_left()
+            go(short_distance)
+            turn_left()
+            go(short_distance)
+            turn_right()
+
+        moved_distance+=1
+
 while not ts.is_pressed:
-
-    mL.run_forever(speed_sp=limit_speed(go_speed))
-    mR.run_forever(speed_sp=limit_speed(go_speed))
-
-    while us.value() < 200:
-        mL.run_forever(speed_sp=limit_speed(rotate_speed))
-        mR.run_forever(speed_sp=limit_speed(-rotate_speed))
-
-    moved_distance += 1
-    rotated_degree = gy.value() - initial_angle
-    if rotated_degree > 0:
-        cosine_distance += cos(rotated_degree)
-
-    print("moved:"+str(moved_distance)+", cos:"+str(cosine_distance)+", us:"+str(us.value()))
+    go(1)
 
 mL.stop(stop_action="hold")
 mR.stop(stop_action="hold")

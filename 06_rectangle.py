@@ -15,7 +15,7 @@ go_position = 1000
 go_speed = 500
 rotate_speed = 100
 
-degree = degree*0.96
+degree = degree*0.95
 
 while not ts.is_pressed:
     # Go straight
