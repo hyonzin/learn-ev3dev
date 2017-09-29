@@ -24,7 +24,7 @@ class Ev3:
             self.mR.run_forever(speed_sp= speed_sp)
 
         start_angle = current_angle = self.gy.value()
-        finish_angle = start_angle + 180;
+        finish_angle = start_angle + degree;
 
         while (degree > 0 and current_angle < finish_angle)\
                 or (degree < 0 and current_angle > finish_angle):
