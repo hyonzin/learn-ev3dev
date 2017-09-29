@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from hyonzin.ev3 import Ev3;
+from ece0929.hyonzin.ev3 import Ev3;
 
 robot = Ev3()
 
