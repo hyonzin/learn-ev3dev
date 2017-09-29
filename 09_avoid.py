@@ -27,8 +27,8 @@ def limit_speed(speed):
 
 while not ts.is_pressed:
 
-    mL.run_forever(speed_sp=limit_speed(go_speed - (gy.value() - initial_angle) * constant))
-    mR.run_forever(speed_sp=limit_speed(go_speed + (gy.value() - initial_angle) * constant))
+    mL.run_forever(speed_sp=limit_speed(go_speed))
+    mR.run_forever(speed_sp=limit_speed(go_speed))
 
     while us.value() < 20:
         mL.run_forever(speed_sp=limit_speed(rotate_speed))
@@ -39,7 +39,7 @@ while not ts.is_pressed:
     if rotated_degree > 0:
         cosine_distance += cos(rotated_degree)
 
-    print("moved:"+str(moved_distance)+", cos:"+str(cosine_distance))
+    print("moved:"+str(moved_distance)+", cos:"+str(cosine_distance)+", us:"+str(us.value()))
 
 mL.stop(stop_action="hold")
 mR.stop(stop_action="hold")

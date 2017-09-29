@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e38b636-134c-41f3-b2fa-92425d515e9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/09_avoid.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/06_rectangle.py" afterPath="$PROJECT_DIR$/06_rectangle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/07_triangle.py" afterPath="$PROJECT_DIR$/07_triangle.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/09_avoid.py" afterPath="$PROJECT_DIR$/09_avoid.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,21 +37,11 @@
       <file leaf-file-name="09_avoid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09_avoid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="608">
+              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ultra_sonic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/0922/ultra_sonic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -333,7 +321,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="go slower 9" />
     <MESSAGE value="go slower 10" />
     <MESSAGE value="go slower 11" />
     <MESSAGE value="0929" />
@@ -358,7 +345,8 @@
     <MESSAGE value="wait while running" />
     <MESSAGE value="degree" />
     <MESSAGE value="rotation not using my class" />
-    <option name="LAST_COMMIT_MESSAGE" value="rotation not using my class" />
+    <MESSAGE value="avoid" />
+    <option name="LAST_COMMIT_MESSAGE" value="avoid" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -696,14 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0922/ultra_sonic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/07_triangle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -722,10 +702,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/0922/ultra_sonic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/09_avoid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="608">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
