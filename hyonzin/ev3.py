@@ -37,6 +37,8 @@ class Ev3:
     def go(self, position_sp, speed_sp=200):
         self.mL.run_to_rel_pos(position_sp=position_sp, speed_sp=speed_sp, stop_action='hold')
         self.mR.run_to_rel_pos(position_sp=position_sp, speed_sp=speed_sp, stop_action='hold')
+        self.mL.wait_while('running')
+        self.mR.wait_while('running')
 
     def show_text(self, text, font='luBS18'):
         self.lcd.clear()
