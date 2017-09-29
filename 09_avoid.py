@@ -9,11 +9,6 @@ gy.mode = 'GYRO-ANG'
 us = UltrasonicSensor()
 us.mode='US-DIST-CM'
 
-constant = 10
-max_speed = 999
-min_speed= -999
-degree = 90
-go_position = 1000
 go_speed = 100
 rotate_speed = 100
 
@@ -23,6 +18,8 @@ rotated_degree = 0
 cosine_distance = 0
 
 def limit_speed(speed):
+    max_speed = 999
+    min_speed= -999
     return min(max(speed, min_speed), max_speed)
 
 while not ts.is_pressed:
@@ -30,7 +27,7 @@ while not ts.is_pressed:
     mL.run_forever(speed_sp=limit_speed(go_speed))
     mR.run_forever(speed_sp=limit_speed(go_speed))
 
-    while us.value() < 20:
+    while us.value() < 200:
         mL.run_forever(speed_sp=limit_speed(rotate_speed))
         mR.run_forever(speed_sp=limit_speed(-rotate_speed))
 
