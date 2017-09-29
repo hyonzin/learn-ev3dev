@@ -24,6 +24,9 @@ def limit_speed(speed):
 
 def turn(degree):
     degree = degree*0.95
+
+    mL.run_forever(speed_sp= degree)
+    mR.run_forever(speed_sp=-degree)
     start_angle = current_angle = gy.value()
     finish_angle = start_angle + degree;
 

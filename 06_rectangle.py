@@ -24,10 +24,10 @@ while not ts.is_pressed:
     mL.wait_while('running')
     mR.wait_while('running')
 
+    # Turn
     mL.run_forever(speed_sp= degree)
     mR.run_forever(speed_sp=-degree)
 
-    # Turn
     start_angle = current_angle = gy.value()
     finish_angle = start_angle + degree;
 
