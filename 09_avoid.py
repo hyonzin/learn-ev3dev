@@ -22,17 +22,16 @@ def limit_speed(speed):
 
 def turn_to(angle):
     start_angle = current_angle = gy.value()
-    angle_to_turn = (angle-start_angle) * 0.95
 
-    if angle_to_turn > 0:
+    if angle - current_angle > 0:
         mL.run_forever(speed_sp= rotate_speed)
         mR.run_forever(speed_sp=-rotate_speed)
     else:
         mL.run_forever(speed_sp=-rotate_speed)
         mR.run_forever(speed_sp= rotate_speed)
 
-    while (angle_to_turn > angle-start_angle and current_angle < start_angle+angle_to_turn) \
-            or (angle_to_turn < angle-start_angle and current_angle > start_angle+angle_to_turn):
+    while (angle > start_angle and angle > current_angle) \
+            or (angle < start_angle and angle < current_angle):
         current_angle = gy.value()
 
 def turn(angle):

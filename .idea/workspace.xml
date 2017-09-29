@@ -17,8 +17,8 @@
       <file leaf-file-name="09_avoid.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/09_avoid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            <state relative-caret-position="404">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -316,7 +316,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="show gyro rate with my class" />
     <MESSAGE value="about package" />
     <MESSAGE value="str in show_text" />
     <MESSAGE value="bigger font" />
@@ -341,7 +340,8 @@
     <MESSAGE value="avoid 5" />
     <MESSAGE value="avoid 6 (turn)" />
     <MESSAGE value="avoid 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="avoid 7" />
+    <MESSAGE value="avoid 8 with turn_to" />
+    <option name="LAST_COMMIT_MESSAGE" value="avoid 8 with turn_to" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -707,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/09_avoid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="404">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
