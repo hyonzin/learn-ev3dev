@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from ev3dev.ev3 import *
-from time import sleep
 
 mL = LargeMotor('outC')
 mR = LargeMotor('outB')
