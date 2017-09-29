@@ -17,11 +17,12 @@ units = gy.units
 mL.run_forever(speed_sp=50)
 mR.run_forever(speed_sp=-50)
 
-start_angle = angle = gy.value()
+start_angle = current_angle = gy.value()
 finish_angle = start_angle + 180;
 
-while gy.value() < finish_angle:
-    print(str(angle) + " " + units)
+while current_angle < finish_angle:
+    current_angle = gy.value()
+    print(str(current_angle) + " " + units)
 
 mL.stop(stop_action="hold")
 mR.stop(stop_action="hold")
