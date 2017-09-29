@@ -10,12 +10,10 @@ us = UltrasonicSensor()
 us.mode='US-DIST-CM'
 
 go_speed = 100
-rotate_speed = 100
+rotate_speed = 50
 
 initial_angle = gy.value()
-short_distance = 800
-rotated_degree = 0
-cosine_distance = 0
+short_distance = 100
 
 def limit_speed(speed):
     max_speed = 999
@@ -25,8 +23,9 @@ def limit_speed(speed):
 def turn(degree):
     degree = degree*0.95
 
-    mL.run_forever(speed_sp= degree)
-    mR.run_forever(speed_sp=-degree)
+    mL.run_forever(speed_sp= rotate_speed)
+    mR.run_forever(speed_sp=-rotate_speed)
+
     start_angle = current_angle = gy.value()
     finish_angle = start_angle + degree;
 
@@ -43,23 +42,23 @@ def turn_right():
 def turn_left():
     turn(-90)
 
-def go(distance):
+def go(distance = short_distance):
     moved_distance=0
 
     while moved_distance < distance:
         mL.run_forever(speed_sp=limit_speed(go_speed))
         mR.run_forever(speed_sp=limit_speed(go_speed))
 
-        if us.value() < 300:
+        if us.value() < 200:
             turn_right()
-            go(short_distance)
+            go()
             turn_left()
-            go(short_distance)
+            go()
             turn_left()
-            go(short_distance)
+            go()
             turn_right()
 
-        moved_distance+=1
+        moved_distance += 1
 
 while not ts.is_pressed:
     go(1)
