@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from ev3dev.ev3 import *
+import ev3dev.fonts as fonts
 
 class Ev3:
     def __init__(self):
@@ -32,7 +33,7 @@ class Ev3:
         self.mL.stop(stop_action="hold")
         self.mR.stop(stop_action="hold")
 
-    def show_text(self, text):
+    def show_text(self, text, font='luBS18'):
         self.lcd.clear()
-        self.lcd.draw.text((60,60), text)
+        self.lcd.draw.text((60,60), text, font = fonts.load(font))
         self.lcd.update()

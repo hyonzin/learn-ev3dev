@@ -7,4 +7,4 @@ robot = Ev3()
 initial_angle = robot.gy.value()
 
 while not robot.ts.is_pressed:
-    robot.show_text(str(robot.gy.value() - initial_angle)+" "+robot.gy.units)
+    robot.show_text(str(robot.gy.value() - initial_angle)+" "+robot.gy.units,  font='luBS24')
