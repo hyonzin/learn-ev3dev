@@ -26,7 +26,8 @@ class Ev3:
         start_angle = current_angle = self.gy.value()
         finish_angle = start_angle + 180;
 
-        while current_angle < finish_angle:
+        while (degree > 0 and current_angle < finish_angle)\
+                or (degree < 0 and current_angle > finish_angle):
             current_angle = self.gy.value()
             print(str(current_angle) + " " + self.gy.units)
 
