@@ -9,4 +9,4 @@ min_speed= -999
 
 while not robot.ts.is_pressed:
     robot.go(position_sp=500)
-    robot.rotate(degree=90)
+    robot.rotate(degree=120)

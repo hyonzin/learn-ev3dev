@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e38b636-134c-41f3-b2fa-92425d515e9b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/07_triangle.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/05_go_straight.py" afterPath="$PROJECT_DIR$/05_go_straight.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/06_rectangle.py" afterPath="$PROJECT_DIR$/06_rectangle.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="05_go_straight.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="05_go_straight.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/05_go_straight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="110" lean-forward="false" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -57,8 +58,18 @@
       <file leaf-file-name="06_rectangle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/06_rectangle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="07_triangle.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/07_triangle.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -142,8 +153,9 @@
         <option value="$PROJECT_DIR$/ece0929/hyonzin/ev3.py" />
         <option value="$PROJECT_DIR$/ece0929/05_go_straight.py" />
         <option value="$PROJECT_DIR$/hyonzin/ev3.py" />
-        <option value="$PROJECT_DIR$/06_rectangle.py" />
         <option value="$PROJECT_DIR$/05_go_straight.py" />
+        <option value="$PROJECT_DIR$/06_rectangle.py" />
+        <option value="$PROJECT_DIR$/07_triangle.py" />
       </list>
     </option>
   </component>
@@ -337,7 +349,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="go slower 4" />
     <MESSAGE value="go slower 5" />
     <MESSAGE value="go slower 6" />
     <MESSAGE value="go slower 7" />
@@ -362,7 +373,8 @@
     <MESSAGE value="dummy commit" />
     <MESSAGE value="dummy commit 2" />
     <MESSAGE value="dummy commit 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="dummy commit 3" />
+    <MESSAGE value="min max reset" />
+    <option name="LAST_COMMIT_MESSAGE" value="min max reset" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -377,13 +389,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/0901/run_motor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/0915/led_blink.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -712,18 +717,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/06_rectangle.py">
+    <entry file="file://$PROJECT_DIR$/05_go_straight.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/05_go_straight.py">
+    <entry file="file://$PROJECT_DIR$/06_rectangle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="110" lean-forward="false" selection-start-line="11" selection-start-column="110" selection-end-line="11" selection-end-column="110" />
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_triangle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
