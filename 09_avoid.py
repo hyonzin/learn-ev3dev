@@ -11,20 +11,19 @@ us.mode='US-DIST-CM'
 
 go_speed = 100
 rotate_speed = 100
-degree = 90
 
 initial_angle = gy.value()
 short_distance = 800
 rotated_degree = 0
 cosine_distance = 0
-degree = degree*0.95
 
 def limit_speed(speed):
     max_speed = 999
     min_speed= -999
     return min(max(speed, min_speed), max_speed)
 
-def turn():
+def turn(degree):
+    degree = degree*0.95
     start_angle = current_angle = gy.value()
     finish_angle = start_angle + degree;
 
