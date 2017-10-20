@@ -25,9 +25,11 @@ def lcd_show(str):
 
 def motor_m_push():
     motor_m.run_timed(time_sp=1500, speed_sp=-100)
+    sleep(1.5)
 
 def motor_m_pull():
     motor_m.run_timed(time_sp=1500, speed_sp=100)
+    sleep(1.5)
 
 def motor_l_init():
     motor_l.run_forever(speed_sp=-200)
@@ -52,9 +54,11 @@ def init():
     motor_m_pull()
 
 def sort(value):
-    lcd_show(COLORS(value))
-
+    global prev_value
     motor_l_go(pos_interval * (value - prev_value))
+    motor_m_push()
+    motor_m_pull()
+    sleep(1)
 
 global prev_value
 prev_value=2
@@ -62,5 +66,10 @@ prev_value=2
 init()
 while True:
     sleep(1)
-    if cs.value() >= 2 and cs.value() <= 5 :
-        sort(cs.value())
+    cs_value = cs.value()
+    lcd_show(COLORS(cs_value))
+    if cs_value >= 2 and cs_value <= 5 :
+        if cs_value != prev_value:
+            sort(cs_value)
+            prev_value = cs_value
+
