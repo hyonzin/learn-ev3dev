@@ -31,3 +31,5 @@ m.run_timed(time_sp=3000, speed_sp=250, stop_action='brake')
 Sound.beep()
 m.wait_while('running')
 Sound.beep()
+
+170 380
