@@ -67,7 +67,7 @@ init()
 while True:
     sleep(1)
     cs_value = cs.value()
-    lcd_show(COLORS(cs_value))
+    lcd_show(COLORS[cs_value])
     if cs_value >= 2 and cs_value <= 5 :
         if cs_value != prev_value:
             sort(cs_value)
