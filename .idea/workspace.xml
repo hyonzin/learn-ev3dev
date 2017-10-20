@@ -39,8 +39,8 @@
       <file leaf-file-name="05_color_sorter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/05_color_sorter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+            <state relative-caret-position="518">
+              <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -408,7 +408,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dummy commit" />
     <MESSAGE value="dummy commit 2" />
     <MESSAGE value="dummy commit 3" />
     <MESSAGE value="min max reset" />
@@ -433,7 +432,8 @@
     <MESSAGE value="color sorter" />
     <MESSAGE value="color sorter update" />
     <MESSAGE value="COLORS [] debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="COLORS [] debug" />
+    <MESSAGE value="motor l wait while running" />
+    <option name="LAST_COMMIT_MESSAGE" value="motor l wait while running" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -737,8 +737,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/05_color_sorter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="42" column="2" lean-forward="false" selection-start-line="42" selection-start-column="2" selection-end-line="42" selection-end-column="2" />
+        <state relative-caret-position="518">
+          <caret line="60" column="18" lean-forward="false" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>

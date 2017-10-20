@@ -59,7 +59,6 @@ def sort(value):
     motor_l_go(pos_interval * (value - prev_value))
     motor_m_push()
     motor_m_pull()
-    sleep(1)
 
 global prev_value
 prev_value=2
@@ -70,7 +69,6 @@ while True:
     cs_value = cs.value()
     lcd_show(COLORS[cs_value])
     if cs_value >= 2 and cs_value <= 5 :
-        if cs_value != prev_value:
-            sort(cs_value)
-            prev_value = cs_value
+        sort(cs_value)
+        prev_value = cs_value
 
