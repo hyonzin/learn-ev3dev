@@ -40,6 +40,7 @@ def motor_l_init():
 
 def motor_l_go(pos):
     motor_l.run_to_rel_pos(position_sp=pos, speed_sp=300, stop_action='brake')
+    motor_l.wait_while('running')
 
 """ functions for color sensor """
 
