@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e38b636-134c-41f3-b2fa-92425d515e9b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/01_thread.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/01_gyro.py" afterPath="$PROJECT_DIR$/0929/01_gyro.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/02_180_degree.py" afterPath="$PROJECT_DIR$/0929/02_180_degree.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/03_gyro_rate.py" afterPath="$PROJECT_DIR$/0929/03_gyro_rate.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/04_left_180_degree.py" afterPath="$PROJECT_DIR$/0929/04_left_180_degree.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/05_go_straight.py" afterPath="$PROJECT_DIR$/0929/05_go_straight.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/06_rectangle.py" afterPath="$PROJECT_DIR$/0929/06_rectangle.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/07_triangle.py" afterPath="$PROJECT_DIR$/0929/07_triangle.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/09_avoid.py" afterPath="$PROJECT_DIR$/0929/09_avoid.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/03_thread.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +14,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="01_thread.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="01_thread.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01_thread.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="02_thread.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02_thread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="03_thread.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/03_thread.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -123,6 +138,8 @@
         <option value="$PROJECT_DIR$/06_rectangle.py" />
         <option value="$PROJECT_DIR$/09_avoid.py" />
         <option value="$PROJECT_DIR$/01_thread.py" />
+        <option value="$PROJECT_DIR$/02_thread.py" />
+        <option value="$PROJECT_DIR$/03_thread.py" />
       </list>
     </option>
   </component>
@@ -321,8 +338,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="left 180 degree rotation" />
-    <MESSAGE value="modify rotation" />
     <MESSAGE value="modify package path" />
     <MESSAGE value="go straight" />
     <MESSAGE value="go straight 2" />
@@ -346,7 +361,9 @@
     <MESSAGE value="avoid 9" />
     <MESSAGE value="avoid 10" />
     <MESSAGE value="avoid 11 wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="avoid 11 wip" />
+    <MESSAGE value="1020" />
+    <MESSAGE value="multi thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="multi thread" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,20 +378,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/0915/bmp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/0915/beep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/0915/button_every_sec.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -631,8 +634,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_thread.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="418">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_thread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
