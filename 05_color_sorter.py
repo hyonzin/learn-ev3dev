@@ -66,12 +66,10 @@ prev_value=2
 
 init()
 while True:
-    sleep(1)
+    sleep(0.5)
     cs_value = cs.value()
     lcd_show(COLORS[cs_value])
     if cs_value >= 2 and cs_value <= 5 :
-        for i in range(10):
-            print(cs.value())
         sort(cs_value)
         prev_value = cs_value
 
