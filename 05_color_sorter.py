@@ -40,7 +40,8 @@ def motor_l_init():
 
 def motor_l_go(pos):
     motor_l.run_to_rel_pos(position_sp=pos, speed_sp=300, stop_action='brake')
-    motor_l.wait_while('running')
+    if pos != 0:
+        motor_l.wait_while('running')
 
 """ functions for color sensor """
 
@@ -69,6 +70,8 @@ while True:
     cs_value = cs.value()
     lcd_show(COLORS[cs_value])
     if cs_value >= 2 and cs_value <= 5 :
+        for i in range(10):
+            print(cs.value())
         sort(cs_value)
         prev_value = cs_value
 
