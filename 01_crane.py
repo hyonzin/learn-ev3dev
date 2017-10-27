@@ -16,10 +16,11 @@ motor = {
     "C": LargeMotor('outC'),
 }
 
-#cs.mode = 'COL-COLOR'
-cs.mode = 'COL-REFLECT'
-
 COLORS = ['unknown', 'black', 'blue', 'green', 'yellow', 'red', 'white', 'brown']
+COLOR_BLUE = 2
+COLOR_GREEN = 3
+COLOR_YELLOW = 4
+COLOR_RED = 5
 
 
 """ functions for LCD """
@@ -73,9 +74,7 @@ def init():
     up()
     unfold()
 
-def on_button_up(state):
-    if not state:
-        return
+def dump(area):
     goto(2)
     down()
     fold()
@@ -86,24 +85,28 @@ def on_button_up(state):
     up()
     goto(1)
 
+def on_button_up(state):
+    if not state:
+        return
+    dump(2)
+
 def on_button_down(state):
     if not state:
         return
-    goto(0)
-    down()
-    fold()
-    middle()
-    goto(1)
-    down()
-    unfold()
-    up()
-    goto(1)
+    dump(0)
 
 init()
 btn.on_up = on_button_up
 btn.on_down = on_button_down
 
+cs.mode = 'COL-REFLECT'
 while True:
     btn.process()
     sleep(0.01)
 
+# cs.mode = 'COL-COLOR'
+# while True:
+#     if cs.value == COLOR_YELLOW:
+#         dump(0)
+#     elif cs.value == COLOR_GREEN:
+#         dump(2)
