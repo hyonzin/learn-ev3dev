@@ -75,7 +75,7 @@ def init():
     unfold()
 
 def dump(area):
-    goto(2)
+    goto(area)
     down()
     fold()
     middle()

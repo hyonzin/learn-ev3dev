@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e38b636-134c-41f3-b2fa-92425d515e9b" name="Default" comment="">
+    <list default="true" id="4e38b636-134c-41f3-b2fa-92425d515e9b" name="Default" comment="crane: &quot;dump&quot; function">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/01_crane.py" afterPath="$PROJECT_DIR$/01_crane.py" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="01_crane.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01_crane.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
               <folding>
                 <element signature="e#25#49#0" expanded="true" />
               </folding>
@@ -521,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1509090040860</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="crane: &quot;dump&quot; function">
+      <created>1509090496784</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1509090496784</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -556,7 +563,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rotation not using my class" />
     <MESSAGE value="avoid" />
     <MESSAGE value="avoid 3" />
     <MESSAGE value="avoid 4" />
@@ -581,7 +587,8 @@
     <MESSAGE value="my crane" />
     <MESSAGE value="crane: button process" />
     <MESSAGE value="crane: button callback only on pressed" />
-    <option name="LAST_COMMIT_MESSAGE" value="crane: button callback only on pressed" />
+    <MESSAGE value="crane: &quot;dump&quot; function" />
+    <option name="LAST_COMMIT_MESSAGE" value="crane: &quot;dump&quot; function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -889,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01_crane.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="101" column="23" lean-forward="true" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
           <folding>
             <element signature="e#25#49#0" expanded="true" />
           </folding>
