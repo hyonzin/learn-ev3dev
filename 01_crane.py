@@ -98,3 +98,8 @@ def on_button_down():
 init()
 btn.on_up = on_button_up
 btn.on_down = on_button_down
+
+while True:
+    btn.process()
+    sleep(0.01)
+
