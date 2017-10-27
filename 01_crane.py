@@ -73,7 +73,9 @@ def init():
     up()
     unfold()
 
-def on_button_up():
+def on_button_up(state):
+    if not state:
+        return
     goto(2)
     down()
     fold()
@@ -84,7 +86,9 @@ def on_button_up():
     up()
     goto(1)
 
-def on_button_down():
+def on_button_down(state):
+    if not state:
+        return
     goto(0)
     down()
     fold()
