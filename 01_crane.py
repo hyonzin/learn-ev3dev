@@ -33,8 +33,8 @@ def lcd_show(str):
 
 """ functions for motor """
 
-current_a = current_b = current_c = 0
 global current_a, current_b, current_c
+current_a = current_b = current_c = 0
 
 
 def motor_init():
@@ -113,11 +113,11 @@ def down():
 
 def goto(area):
     global current_a
-    if area < 0 or area > 2 or current_a == -280 * area:
+    if area < 0 or area > 2 or current_a == -290 * area:
         return
-    pos = -280 * area - current_a
+    pos = -290 * area - current_a
     motor_move("C", pos)
-    current_a = -280 * area
+    current_a = -290 * area
 
 
 """ functions for Crane Application """
