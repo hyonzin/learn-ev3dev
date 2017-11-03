@@ -33,22 +33,23 @@ def lcd_show(str):
 
 """ functions for motor """
 
+current_a = current_b = current_c = 0
 global current_a, current_b, current_c
 
 
 def motor_init():
     # initial
+    # A
+    fold()
+    unfold()
     # B
     while cs.value() < 20:
         motor["B"].run_forever(speed_sp=-50)
     motor["B"].stop()
-    # A
-    motor["A"].run_timed(time_sp=1000, speed_sp=200)
     # C
     while not ts.is_pressed:
         motor["C"].run_forever(speed_sp=200)
     motor["C"].stop()
-    motor_move("A", -80)
     # set initial position variable
     global current_a, current_b, current_c
     current_a = current_b = current_c = 0
@@ -67,17 +68,23 @@ def motor_wait(idx):
 
 
 def fold():
-    global current_a
-    if current_a == 80: return
-    motor_move("A", 80-current_a)
-    current_a = 80
+    motor["A"].run_timed(time_sp=1000, speed_sp=200)
+    motor_wait("A")
+    # global current_a
+    # if current_a == 60:
+    #     return
+    # motor_move("A", 60-current_a, 80)
+    # current_a = 60
 
 
 def unfold():
-    global current_a
-    if current_a == 0: return
-    motor_move("A", -current_a)
-    current_a = 0
+    motor["A"].run_timed(time_sp=1000, speed_sp=-70)
+    motor_wait("A")
+    # global current_a
+    # if current_a == 0:
+    #     return
+    # motor_move("A", -current_a, 80)
+    # current_a = 0
 
 
 def up():
@@ -94,8 +101,8 @@ def up():
 
 def middle():
     global current_b
-    motor_move("B", 300-current_b, 500)
-    current_b = 300
+    motor_move("B", 150-current_b, 100)
+    current_b = 150
 
 
 def down():
@@ -106,11 +113,11 @@ def down():
 
 def goto(area):
     global current_a
-    if area < 0 or area > 2 or current_a == -320 * area:
+    if area < 0 or area > 2 or current_a == -280 * area:
         return
-    pos = -320 * area - current_a
+    pos = -280 * area - current_a
     motor_move("C", pos)
-    current_a = -320 * area
+    current_a = -280 * area
 
 
 """ functions for Crane Application """
@@ -118,6 +125,7 @@ def goto(area):
 
 def init():
     motor_init()
+    goto(1)
 
 
 def dump(area):
@@ -126,7 +134,7 @@ def dump(area):
     goto(area)
     down()
     fold()
-    middle()
+    up()
     goto(1)
     down()
     unfold()
