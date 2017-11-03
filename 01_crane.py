@@ -33,46 +33,88 @@ def lcd_show(str):
 
 """ functions for motor """
 
+global current_b
+
+
+def motor_init():
+
+    # initial
+    while cs.value() < 20:
+        motor["B"].run_forever(speed_sp=-50)
+    motor["B"].stop()
+
+    motor["A"].run_timed(time_sp=1000, speed_sp=200)
+
+    while not ts.is_pressed:
+        motor["C"].run_forever(speed_sp=200)
+    motor["C"].stop()
+
+    motor_move("A", -80)
+
+    # set initial position
+    global current_a, current_b, current_c
+    current_a = current_b = current_c = 0
+
+
 def motor_move(idx, pos, speed=200):
-    motor[idx].run_to_abs_pos(
+    motor[idx].run_to_rel_pos(
         position_sp=pos,
         speed_sp=speed,
         stop_action='brake')
     motor_wait(idx)
 
+
 def motor_wait(idx):
     motor[idx].wait_while("running")
 
-def goto(area):
-    if area >= 0 and area <= 2:
-        pos = -320 * area
-        motor_move("C", pos)
-
-def up():
-    #motor_move("B", 0)
-    while cs.value() < 20:
-        motor["B"].run_forever(speed_sp=-200)
-    motor["B"].stop()
-
-def middle():
-    motor_move("B", 300)
-
-def down():
-    motor_move("B", 400)
 
 def fold():
-    motor_move("A", 80)
+    global current_a
+    motor_move("A", 80-current_a)
+    current_a = 80
+
 
 def unfold():
-    motor_move("A", 0)
+    global current_a
+    motor_move("A", -current_a)
+    current_a = 0
+
+
+def up():
+    global current_b
+    if current_b > 50:
+        motor_move("B", 50-current_b, 500)
+        motor_move("B", -50, 100)
+    else:
+        motor_move("B", -current_b, 100)
+    current_b = 0
+
+
+def middle():
+    global current_b
+    motor_move("B", 300-current_b, 500)
+    current_b = 300
+
+
+def down():
+    global current_b
+    motor_move("B", 400-current_b, 500)
+    current_b = 400
+
+
+def goto(area):
+    global current_a
+    pos = -320 * area - current_a
+    motor_move("C", pos)
+    current_a = -320 * area
 
 
 """ functions for Crane Application """
 
+
 def init():
-    goto(1)
-    up()
-    unfold()
+    motor_init()
+
 
 def dump(area):
     goto(area)
@@ -83,12 +125,13 @@ def dump(area):
     down()
     unfold()
     up()
-    goto(1)
+
 
 def on_button_up(state):
     if not state:
         return
     dump(2)
+
 
 def on_button_down(state):
     if not state:
