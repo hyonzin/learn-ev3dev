@@ -33,7 +33,6 @@ def lcd_show(str):
 
 """ functions for motor """
 
-global current_a, current_b, current_c
 current_a = current_b = current_c = 0
 
 
