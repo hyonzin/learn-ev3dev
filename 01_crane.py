@@ -33,25 +33,23 @@ def lcd_show(str):
 
 """ functions for motor """
 
-global current_b
+global current_a, current_b, current_c
 
 
 def motor_init():
-
     # initial
+    # B
     while cs.value() < 20:
         motor["B"].run_forever(speed_sp=-50)
     motor["B"].stop()
-
+    # A
     motor["A"].run_timed(time_sp=1000, speed_sp=200)
-
+    # C
     while not ts.is_pressed:
         motor["C"].run_forever(speed_sp=200)
     motor["C"].stop()
-
     motor_move("A", -80)
-
-    # set initial position
+    # set initial position variable
     global current_a, current_b, current_c
     current_a = current_b = current_c = 0
 
@@ -70,12 +68,14 @@ def motor_wait(idx):
 
 def fold():
     global current_a
+    if current_a == 80: return
     motor_move("A", 80-current_a)
     current_a = 80
 
 
 def unfold():
     global current_a
+    if current_a == 0: return
     motor_move("A", -current_a)
     current_a = 0
 
@@ -84,7 +84,9 @@ def up():
     global current_b
     if current_b > 50:
         motor_move("B", 50-current_b, 500)
-        motor_move("B", -50, 100)
+        while cs.value() < 20:
+            motor["B"].run_forever(speed_sp=-50)
+        motor["B"].stop()
     else:
         motor_move("B", -current_b, 100)
     current_b = 0
@@ -98,12 +100,14 @@ def middle():
 
 def down():
     global current_b
-    motor_move("B", 400-current_b, 500)
-    current_b = 400
+    motor_move("B", 300-current_b, 500)
+    current_b = 300
 
 
 def goto(area):
     global current_a
+    if area < 0 or area > 2 or current_a == -320 * area:
+        return
     pos = -320 * area - current_a
     motor_move("C", pos)
     current_a = -320 * area
@@ -117,6 +121,8 @@ def init():
 
 
 def dump(area):
+    if area != 0 and area != 2:
+        return
     goto(area)
     down()
     fold()
