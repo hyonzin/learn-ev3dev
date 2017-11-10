@@ -70,17 +70,30 @@ def sit_down():
 
 
 def stand_up():
-    speed_sp = -250
-    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-24, stop_action="hold")
-    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-24, stop_action="hold")
+    speed_sp = -300
+    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-30, stop_action="hold")
+    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-30, stop_action="hold")
     ml.wait_while("running")
     mr.wait_while("running")
-    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-44, stop_action="hold")
-    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-44, stop_action="hold")
+    sleep(0.5)
+    speed_sp = -400
+    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-34, stop_action="hold")
+    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-34, stop_action="hold")
+    ml.wait_while("running")
+    mr.wait_while("running")
+    sleep(0.5)
+    speed_sp = -300
+    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-40, stop_action="hold")
+    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-40, stop_action="hold")
+    ml.wait_while("running")
+    mr.wait_while("running")
+    sleep(0.5)
+    speed_sp = -50
+    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-60, stop_action="hold")
+    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-60, stop_action="hold")
     ml.wait_while("running")
     mr.wait_while("running")
 
-stand_up()
 
 """ main code """
 
@@ -137,6 +150,8 @@ def init():
     sit_down()
     sit_down()
     sit_down()
+    ml.wait_while("running")
+    mr.wait_while("running")
     ml.reset()
     mr.reset()
 
