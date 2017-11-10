@@ -70,13 +70,15 @@ def sit_down():
 
 
 def stand_up():
-    speed_sp = -260
+    speed_sp = -250
     ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-24, stop_action="hold")
     mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-24, stop_action="hold")
     ml.wait_while("running")
     mr.wait_while("running")
-    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-60, stop_action="hold")
-    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-60, stop_action="hold")
+    ml.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-44, stop_action="hold")
+    mr.run_to_abs_pos(speed_sp=max(speed_sp, -1000), position_sp=-44, stop_action="hold")
+    ml.wait_while("running")
+    mr.wait_while("running")
 
 stand_up()
 
