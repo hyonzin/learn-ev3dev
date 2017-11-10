@@ -32,4 +32,3 @@ Sound.beep()
 m.wait_while('running')
 Sound.beep()
 
-170 380
