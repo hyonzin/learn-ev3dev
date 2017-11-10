@@ -136,7 +136,7 @@ def on_green():
 
 def on_blue():
     global bark_mode
-    bark_mode = False   # not bark_mode
+    bark_mode = not bark_mode
     if bark_mode:
         lcd_show("Blue (True)")
     else:
