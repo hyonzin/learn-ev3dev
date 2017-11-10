@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from ev3dev.ev3 import *
 import ev3dev.fonts as fonts
 from time import sleep
@@ -119,7 +121,7 @@ def on_green():
 
 def on_blue():
     global bark_mode
-    bark_mode = not bark_mode
+    bark_mode = False   # not bark_mode
     if bark_mode:
         lcd_show("Blue (True)")
     else:
