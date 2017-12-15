@@ -8,3 +8,4 @@ PROCESSES = (DotTalk, DotServer)
 
 for process in PROCESSES:
     Thread(target=process().run).start()
+
